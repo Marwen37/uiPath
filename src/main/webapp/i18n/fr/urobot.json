@@ -1,0 +1,30 @@
+{
+  "uiPathApp": {
+    "urobot": {
+      "home": {
+        "title": "Urobots",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Urobot",
+        "createOrEditLabel": "Créer ou éditer un Urobot",
+        "notFound": "Aucun Urobot trouvé"
+      },
+      "created": "Un nouveau Urobot a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Urobot avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Urobot avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Urobot {{ id }} ?"
+      },
+      "detail": {
+        "title": "Urobot"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "type": "Type",
+      "domainUsername": "Domain Username",
+      "password": "Password",
+      "uenvironment": "Uenvironment",
+      "machine": "Machine"
+    }
+  }
+}

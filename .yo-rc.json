@@ -42,7 +42,9 @@
     "rememberMeKey": "e8adcdd15c99811b48f357dfe377e608427015227a963786750b7c91e898690103d8bdfddb03fb4ea1cb92e7083fae81415f",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "reactive": false
+    "reactive": false,
+    "entities": ["Machine", "Urobot", "Uenvironment", "Uprocess", "Ujob", "Upackage"],
+    "lastLiquibaseTimestamp": 1618698846000
   },
   "git-provider": "GitHub",
   "git-company": "Marwen37",

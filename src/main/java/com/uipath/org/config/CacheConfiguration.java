@@ -50,6 +50,16 @@ public class CacheConfiguration {
             createCache(cm, com.uipath.org.domain.User.class.getName() + ".authorities");
             createCache(cm, com.uipath.org.domain.PersistentToken.class.getName());
             createCache(cm, com.uipath.org.domain.User.class.getName() + ".persistentTokens");
+            createCache(cm, com.uipath.org.domain.Machine.class.getName());
+            createCache(cm, com.uipath.org.domain.Urobot.class.getName());
+            createCache(cm, com.uipath.org.domain.Urobot.class.getName() + ".machines");
+            createCache(cm, com.uipath.org.domain.Uenvironment.class.getName());
+            createCache(cm, com.uipath.org.domain.Uenvironment.class.getName() + ".urobots");
+            createCache(cm, com.uipath.org.domain.Uprocess.class.getName());
+            createCache(cm, com.uipath.org.domain.Uprocess.class.getName() + ".upackages");
+            createCache(cm, com.uipath.org.domain.Uprocess.class.getName() + ".uenvironments");
+            createCache(cm, com.uipath.org.domain.Ujob.class.getName());
+            createCache(cm, com.uipath.org.domain.Upackage.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

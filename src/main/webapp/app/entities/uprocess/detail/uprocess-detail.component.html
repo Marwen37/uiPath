@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="uprocess">
+      <h2 data-cy="uprocessDetailsHeading"><span jhiTranslate="uiPathApp.uprocess.detail.title">Uprocess</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ uprocess.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="uiPathApp.uprocess.name">Name</span></dt>
+        <dd>
+          <span>{{ uprocess.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="uiPathApp.uprocess.description">Description</span></dt>
+        <dd>
+          <span>{{ uprocess.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="uiPathApp.uprocess.jobPriority">Job Priority</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'uiPathApp.Priority.' + uprocess.jobPriority }}">{{ uprocess.jobPriority }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/uprocess', uprocess.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
