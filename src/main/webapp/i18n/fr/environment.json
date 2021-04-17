@@ -1,0 +1,29 @@
+{
+  "uiPathApp": {
+    "environment": {
+      "home": {
+        "title": "Environments",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Environment",
+        "createOrEditLabel": "Créer ou éditer un Environment",
+        "notFound": "Aucun Environment trouvé"
+      },
+      "created": "Un nouveau Environment a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Environment avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Environment avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Environment {{ id }} ?"
+      },
+      "detail": {
+        "title": "Environment"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "robot": "Robot",
+      "process": "Process",
+      "process": "Process",
+      "robot": "Robot"
+    }
+  }
+}

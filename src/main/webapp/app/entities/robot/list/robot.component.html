@@ -1,0 +1,116 @@
+<div>
+  <h2 id="page-heading" data-cy="RobotHeading">
+    <span jhiTranslate="uiPathApp.robot.home.title">Robots</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="uiPathApp.robot.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-robot"
+        [routerLink]="['/robot/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="uiPathApp.robot.home.createLabel"> Create a new Robot </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="robots?.length === 0">
+    <span jhiTranslate="uiPathApp.robot.home.notFound">No robots found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="robots && robots.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="name"><span jhiTranslate="uiPathApp.robot.name">Name</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="description">
+            <span jhiTranslate="uiPathApp.robot.description">Description</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="type"><span jhiTranslate="uiPathApp.robot.type">Type</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="domainUsername">
+            <span jhiTranslate="uiPathApp.robot.domainUsername">Domain Username</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="password">
+            <span jhiTranslate="uiPathApp.robot.password">Password</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="environment.id">
+            <span jhiTranslate="uiPathApp.robot.environment">Environment</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="environment.id">
+            <span jhiTranslate="uiPathApp.robot.environment">Environment</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let robot of robots; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/robot', robot.id, 'view']">{{ robot.id }}</a>
+          </td>
+          <td>{{ robot.name }}</td>
+          <td>{{ robot.description }}</td>
+          <td jhiTranslate="{{ 'uiPathApp.RobotType.' + robot.type }}">{{ robot.type }}</td>
+          <td>{{ robot.domainUsername }}</td>
+          <td>{{ robot.password }}</td>
+          <td>
+            <div *ngIf="robot.environment">
+              <a [routerLink]="['/environment', robot.environment?.id, 'view']">{{ robot.environment?.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="robot.environment">
+              <a [routerLink]="['/environment', robot.environment?.id, 'view']">{{ robot.environment?.id }}</a>
+            </div>
+          </td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button type="submit" [routerLink]="['/robot', robot.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button type="submit" [routerLink]="['/robot', robot.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(robot)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="robots && robots.length > 0">
+    <div class="row justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="row justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

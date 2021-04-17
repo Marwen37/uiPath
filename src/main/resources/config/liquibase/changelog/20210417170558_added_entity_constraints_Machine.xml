@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity Machine.
+    -->
+    <changeSet id="20210417170558-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="robot_id"
+                                 baseTableName="machine"
+                                 constraintName="fk_machine__robot_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="robot"/>
+
+        <addForeignKeyConstraint baseColumnNames="robot_id"
+                                 baseTableName="machine"
+                                 constraintName="fk_machine__robot_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="robot"/>
+    </changeSet>
+</databaseChangeLog>

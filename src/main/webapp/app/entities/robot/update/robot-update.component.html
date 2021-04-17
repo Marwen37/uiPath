@@ -1,0 +1,108 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-robot-heading" data-cy="RobotCreateUpdateHeading" jhiTranslate="uiPathApp.robot.home.createOrEditLabel">
+        Create or edit a Robot
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="uiPathApp.robot.name" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="uiPathApp.robot.description" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="uiPathApp.robot.type" for="field_type">Type</label>
+          <select class="form-control" name="type" formControlName="type" id="field_type" data-cy="type">
+            <option [ngValue]="null">{{ 'uiPathApp.RobotType.null' | translate }}</option>
+            <option value="Studio">{{ 'uiPathApp.RobotType.Studio' | translate }}</option>
+            <option value="Unattended">{{ 'uiPathApp.RobotType.Unattended' | translate }}</option>
+            <option value="NonProduction">{{ 'uiPathApp.RobotType.NonProduction' | translate }}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="uiPathApp.robot.domainUsername" for="field_domainUsername">Domain Username</label>
+          <input
+            type="text"
+            class="form-control"
+            name="domainUsername"
+            id="field_domainUsername"
+            data-cy="domainUsername"
+            formControlName="domainUsername"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="uiPathApp.robot.password" for="field_password">Password</label>
+          <input type="text" class="form-control" name="password" id="field_password" data-cy="password" formControlName="password" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="uiPathApp.robot.environment" for="field_environment">Environment</label>
+          <select class="form-control" id="field_environment" data-cy="environment" name="environment" formControlName="environment">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                environmentOption.id === editForm.get('environment')!.value?.id ? editForm.get('environment')!.value : environmentOption
+              "
+              *ngFor="let environmentOption of environmentsSharedCollection; trackBy: trackEnvironmentById"
+            >
+              {{ environmentOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="uiPathApp.robot.environment" for="field_environment">Environment</label>
+          <select class="form-control" id="field_environment" data-cy="environment" name="environment" formControlName="environment">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                environmentOption.id === editForm.get('environment')!.value?.id ? editForm.get('environment')!.value : environmentOption
+              "
+              *ngFor="let environmentOption of environmentsSharedCollection; trackBy: trackEnvironmentById"
+            >
+              {{ environmentOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

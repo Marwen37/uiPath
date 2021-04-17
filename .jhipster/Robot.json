@@ -1,0 +1,64 @@
+{
+  "name": "Robot",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "RobotType",
+      "fieldValues": "Studio,Unattended,NonProduction"
+    },
+    {
+      "fieldName": "domainUsername",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "machine",
+      "otherEntityRelationshipName": "robot",
+      "relationshipName": "machine",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "environment",
+      "otherEntityRelationshipName": "robot",
+      "relationshipName": "environment"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "environment",
+      "otherEntityRelationshipName": "robot",
+      "relationshipName": "environment"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "machine",
+      "otherEntityRelationshipName": "robot",
+      "relationshipName": "machine",
+      "otherEntityField": "id"
+    }
+  ],
+  "entityTableName": "robot",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210417170559"
+}

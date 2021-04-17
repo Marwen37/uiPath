@@ -1,0 +1,32 @@
+{
+  "uiPathApp": {
+    "robot": {
+      "home": {
+        "title": "Robots",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Robot",
+        "createOrEditLabel": "Create or edit a Robot",
+        "notFound": "No Robots found"
+      },
+      "created": "A new Robot is created with identifier {{ param }}",
+      "updated": "A Robot is updated with identifier {{ param }}",
+      "deleted": "A Robot is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Robot {{ id }}?"
+      },
+      "detail": {
+        "title": "Robot"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "type": "Type",
+      "domainUsername": "Domain Username",
+      "password": "Password",
+      "machine": "Machine",
+      "environment": "Environment",
+      "environment": "Environment",
+      "machine": "Machine"
+    }
+  }
+}

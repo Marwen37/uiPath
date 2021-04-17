@@ -1,0 +1,27 @@
+{
+  "uiPathApp": {
+    "upackage": {
+      "home": {
+        "title": "Upackages",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Upackage",
+        "createOrEditLabel": "Créer ou éditer un Upackage",
+        "notFound": "Aucun Upackage trouvé"
+      },
+      "created": "Un nouveau Upackage a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Upackage avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Upackage avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Upackage {{ id }} ?"
+      },
+      "detail": {
+        "title": "Upackage"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "process": "Process",
+      "process": "Process"
+    }
+  }
+}

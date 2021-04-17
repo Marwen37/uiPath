@@ -1,0 +1,58 @@
+{
+  "name": "Process",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobPriority",
+      "fieldType": "Priority",
+      "fieldValues": "Low,Normal,High"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "upackage",
+      "otherEntityRelationshipName": "process",
+      "relationshipName": "upackage",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "environment",
+      "otherEntityRelationshipName": "process",
+      "relationshipName": "environment",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "upackage",
+      "otherEntityRelationshipName": "process",
+      "relationshipName": "upackage",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "environment",
+      "otherEntityRelationshipName": "process",
+      "relationshipName": "environment",
+      "otherEntityField": "id"
+    }
+  ],
+  "entityTableName": "process",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210417170601"
+}

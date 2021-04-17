@@ -1,0 +1,41 @@
+{
+  "name": "Machine",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "licence",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "robot",
+      "otherEntityRelationshipName": "machine",
+      "relationshipName": "robot"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "robot",
+      "otherEntityRelationshipName": "machine",
+      "relationshipName": "robot"
+    }
+  ],
+  "entityTableName": "machine",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210417170558"
+}

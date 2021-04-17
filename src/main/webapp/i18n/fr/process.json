@@ -1,0 +1,30 @@
+{
+  "uiPathApp": {
+    "process": {
+      "home": {
+        "title": "Processes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Process",
+        "createOrEditLabel": "Créer ou éditer un Process",
+        "notFound": "Aucun Process trouvé"
+      },
+      "created": "Un nouveau Process a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Process avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Process avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Process {{ id }} ?"
+      },
+      "detail": {
+        "title": "Process"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "jobPriority": "Job Priority",
+      "upackage": "Upackage",
+      "environment": "Environment",
+      "upackage": "Upackage",
+      "environment": "Environment"
+    }
+  }
+}

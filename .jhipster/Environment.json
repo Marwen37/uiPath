@@ -1,0 +1,51 @@
+{
+  "name": "Environment",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "robot",
+      "otherEntityRelationshipName": "environment",
+      "relationshipName": "robot",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "process",
+      "otherEntityRelationshipName": "environment",
+      "relationshipName": "process"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "process",
+      "otherEntityRelationshipName": "environment",
+      "relationshipName": "process"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "robot",
+      "otherEntityRelationshipName": "environment",
+      "relationshipName": "robot",
+      "otherEntityField": "id"
+    }
+  ],
+  "entityTableName": "environment",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210417170600"
+}
