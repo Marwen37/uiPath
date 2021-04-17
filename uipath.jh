@@ -1,0 +1,64 @@
+
+
+entity Machine {
+  name 				String
+  description		String
+  Licence			Integer
+}
+
+entity Urobot {
+	name			String
+    description		String
+    type			RobotType
+	domainUsername	String
+    password		String
+}
+
+enum RobotType {
+	Studio, Unattended, NonProduction
+}
+
+entity Uenvironment {
+  name 				String
+  description		String
+}
+
+entity Uprocess {
+	name			String
+    description		String
+    jobPriority		Priority
+}
+
+enum Priority {
+	Low, Normal, High
+}
+
+entity Ujob {
+	name			String
+    description		String
+} 
+entity Upackage {
+	name			String
+    description		String
+    description		String
+}
+
+relationship ManyToOne {
+  Machine to Urobot{machine(id)},
+  Urobot to Uenvironment{urobot(id)},
+  Upackage to Process{upackage(id)},
+  Uenvironment to Process{uenvironment(id)}
+}
+relationship OneToMany {
+  Urobot{machine(id)} to Machine,
+  Uenvironment{urobot(id)} to Urobot,
+  Uprocess{upackage(id)} to Upackage,
+  Uprocess{uenvironment(id)} to Uenvironment
+}
+
+
+dto all with mapstruct
+service * with serviceClass
+paginate all with pagination
+filter *
+
