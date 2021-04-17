@@ -1,0 +1,10 @@
+{
+  "uiPathApp": {
+    "RobotType": {
+      "null": "",
+      "Studio": "Studio",
+      "Unattended": "Unattended",
+      "NonProduction": "NonProduction"
+    }
+  }
+}

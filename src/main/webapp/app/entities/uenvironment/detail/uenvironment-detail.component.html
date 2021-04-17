@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="uenvironment">
+      <h2 data-cy="uenvironmentDetailsHeading"><span jhiTranslate="uiPathApp.uenvironment.detail.title">Uenvironment</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ uenvironment.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="uiPathApp.uenvironment.name">Name</span></dt>
+        <dd>
+          <span>{{ uenvironment.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="uiPathApp.uenvironment.description">Description</span></dt>
+        <dd>
+          <span>{{ uenvironment.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="uiPathApp.uenvironment.uprocess">Uprocess</span></dt>
+        <dd>
+          <div *ngIf="uenvironment.uprocess">
+            <a [routerLink]="['/uprocess', uenvironment.uprocess?.id, 'view']">{{ uenvironment.uprocess?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="uiPathApp.uenvironment.uprocess">Uprocess</span></dt>
+        <dd>
+          <div *ngIf="uenvironment.uprocess">
+            <a [routerLink]="['/uprocess', uenvironment.uprocess?.id, 'view']">{{ uenvironment.uprocess?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/uenvironment', uenvironment.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

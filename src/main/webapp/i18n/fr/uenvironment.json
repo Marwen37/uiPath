@@ -1,0 +1,29 @@
+{
+  "uiPathApp": {
+    "uenvironment": {
+      "home": {
+        "title": "Uenvironments",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Uenvironment",
+        "createOrEditLabel": "Créer ou éditer un Uenvironment",
+        "notFound": "Aucun Uenvironment trouvé"
+      },
+      "created": "Un nouveau Uenvironment a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Uenvironment avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Uenvironment avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Uenvironment {{ id }} ?"
+      },
+      "detail": {
+        "title": "Uenvironment"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "urobot": "Urobot",
+      "uprocess": "Uprocess",
+      "uprocess": "Uprocess",
+      "urobot": "Urobot"
+    }
+  }
+}
