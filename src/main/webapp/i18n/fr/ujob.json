@@ -1,0 +1,25 @@
+{
+  "uiPathApp": {
+    "ujob": {
+      "home": {
+        "title": "Ujobs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Ujob",
+        "createOrEditLabel": "Créer ou éditer un Ujob",
+        "notFound": "Aucun Ujob trouvé"
+      },
+      "created": "Un nouveau Ujob a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Ujob avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Ujob avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Ujob {{ id }} ?"
+      },
+      "detail": {
+        "title": "Ujob"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description"
+    }
+  }
+}

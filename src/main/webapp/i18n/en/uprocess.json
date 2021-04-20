@@ -1,0 +1,28 @@
+{
+  "uiPathApp": {
+    "uprocess": {
+      "home": {
+        "title": "Uprocesses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Uprocess",
+        "createOrEditLabel": "Create or edit a Uprocess",
+        "notFound": "No Uprocesses found"
+      },
+      "created": "A new Uprocess is created with identifier {{ param }}",
+      "updated": "A Uprocess is updated with identifier {{ param }}",
+      "deleted": "A Uprocess is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Uprocess {{ id }}?"
+      },
+      "detail": {
+        "title": "Uprocess"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "jobPriority": "Job Priority",
+      "upackage": "Upackage",
+      "uenvironment": "Uenvironment"
+    }
+  }
+}

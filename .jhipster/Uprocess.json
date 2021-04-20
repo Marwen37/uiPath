@@ -1,0 +1,44 @@
+{
+  "name": "Uprocess",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobPriority",
+      "fieldType": "Priority",
+      "fieldValues": "Low,Normal,High"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "upackage",
+      "otherEntityRelationshipName": "uprocess",
+      "relationshipName": "upackage",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "uenvironment",
+      "otherEntityRelationshipName": "uprocess",
+      "relationshipName": "uenvironment",
+      "otherEntityField": "id"
+    }
+  ],
+  "entityTableName": "uprocess",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210417223404"
+}
