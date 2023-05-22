@@ -43,6 +43,7 @@ public class Machine implements Serializable {
         this.id = id;
     }
 
+    // Commentaire pour push sur le serveur 
     public Machine id(Long id) {
         this.id = id;
         return this;
@@ -60,7 +61,7 @@ public class Machine implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
+    // 2em jour : ajouter 2em commentaire
     public String getDescription() {
         return this.description;
     }
