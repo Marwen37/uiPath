@@ -23,7 +23,7 @@ public class Machine implements Serializable {
 
     @Column(name = "name")
     private String name;
-
+// Add commentaire pour pull from main
     @Column(name = "description")
     private String description;
 
