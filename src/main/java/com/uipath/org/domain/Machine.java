@@ -43,6 +43,7 @@ public class Machine implements Serializable {
         this.id = id;
     }
 
+    // Commentaire pour push sur le serveur 
     public Machine id(Long id) {
         this.id = id;
         return this;
